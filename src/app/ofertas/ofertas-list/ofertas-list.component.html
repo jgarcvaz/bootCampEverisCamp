@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="container xd-container">
+    <h1> Listado de Ofertas </h1>
+
+    <div class="table-responsive">
+      <table class="table table-striped">
+      <tr>
+        <th>Id : </th>
+        <th>Titulo : </th>
+        <th>Descripcion : </th>
+        <th>Descuento : </th>
+        <th>Fecha de Caducidad : </th>
+        <th>Acciones : </th>
+      </tr>
+      <tr *ngFor="let oferta of ofertas">
+        <td><p> {{oferta.id}} </p></td>
+        <td><p> {{oferta.title}} </p></td>
+        <td><p> {{oferta.description}} </p></td>
+        <td><p> {{oferta.discount}} </p></td>
+        <td><p> {{oferta.expiryDate}} </p></td>
+        <td><button class="btn btn-default" type="button" (click)="delete(oferta.id)">Borrar</button></td>
+      </tr>
+
+    </table>
+  </div>
+</div>
